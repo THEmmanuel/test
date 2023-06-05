@@ -46,6 +46,7 @@
 	flex-direction: column;
 	justify-content: left;
 	padding-left: 10px;
+	gap: 5px;
 }
 
 .ItemImage {
@@ -81,16 +82,21 @@
 .ItemName {
 	font-weight: 800;
 	width: fit-content;
+	font-size: 0.9em;
 }
 
 .ItemBrand {
 	opacity: 0.5;
 	width: fit-content;
+	font-size: 0.8em;
 }
 
 .ItemPrice {
 	background-color: #F0F0F2;
-	width: 60%;
+	font-size: 0.8em;
+	text-align: left;
+	padding: 5px 10px;
+	width: fit-content;
 }
 
 .ItemsInputText {

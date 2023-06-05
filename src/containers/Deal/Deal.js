@@ -17,24 +17,34 @@ const Deal = () => {
 				</div>
 
 				<div className={style.ChanceWrapper}>
-					<div>
-						<span>Chance</span>
-						<div>
-							stuff
-							<div>
-								<button>Min</button>
-								<button>10%</button>
-								<button>25%</button>
-								<button>50%</button>
-								<button>Max</button>
+					<div className={style.ChanceInputWrapper}>
+						<span className={style.ChanceInputHeading}>CHANCE</span>
+						<div className={style.ChanceInputContainer}>
+							<input type="text" className={style.ChanceInput} />
+							<div className={style.ChanceButtonWrapper}>
+								<button className={style.ChanceButton}>Min</button>
+								<button className={style.ChanceButton}>10%</button>
+								<button className={style.ChanceButton}>25%</button>
+								<button className={style.ChanceButton}>50%</button>
+								<button className={style.ChanceButton}>Max</button>
 							</div>
 						</div>
 					</div>
 
 					<div>
-						<span>Price</span>
 						<div>
-							slider
+							<span>Price</span>
+							<input type="text" className={style.ChanceInput} />
+						</div>
+
+
+						<div className={style.SliderWrapper}>
+							<input type="range" min="0" max="100" className={style.Slider} />
+							<div className={style.SliderRanges}>
+								<span>0</span>
+								<span>50</span>
+								<span>100</span>
+							</div>
 						</div>
 					</div>
 				</div>
