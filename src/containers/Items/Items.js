@@ -15,12 +15,12 @@ const Items = () => {
 						</div>
 
 						<div className={style.InputSecondaryWrapper}>
-							<div className={style.ItemsInput}>
+							<div className={style.ItemsInputSecondary}>
 								<span className={style.ItemsInputText}>PRICE MAX</span>
 								<input type="text" className={`${style.InputSecondary}`} />
 							</div>
 
-							<div className={style.ItemsInput}>
+							<div className={style.ItemsInputSecondary}>
 								<span className={style.ItemsInputText}>ORDER BY</span>
 								<input type="text" className={`${style.InputSecondary}`} />
 							</div>

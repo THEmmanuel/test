@@ -7,13 +7,13 @@
 .circleBackground {
 	fill: none;
 	stroke: #e6e6e6;
-	stroke-width: 6;
+	stroke-width: 20;
 }
 
 .circleProgressBar {
 	fill: none;
 	stroke: #3D9D43;
-	stroke-width: 6;
+	stroke-width: 20;
 	stroke-linecap: round;
 	stroke-dasharray: 0;
 }
