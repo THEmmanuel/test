@@ -1,14 +1,18 @@
 import React from 'react';
+import style from './Deal.module.css'
+
 
 const Deal = () => {
 	return (
 		<div>
 			<div>
-				spinner
+				<div className={style.SpinnerWrapper}>
+					Spinner
+				</div>
 
 				<div>
-					<button>Deal for </button>
-					<button>Refresh</button>
+					<button className={style.DealButton}>DEAL FOR </button>
+					<button className={style.RefreshButton}>Refresh</button>
 					<button>quick spin</button>
 				</div>
 

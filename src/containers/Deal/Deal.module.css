@@ -1,0 +1,18 @@
+.SpinnerWrapper{
+	width: 200%;
+	height: 200px;
+	background-color: black;
+}
+
+.DealButton{
+	background-color: #3D9D43;
+	border: none;
+	padding: 10px 40px;
+	font-size: 1em;
+	color: #FFF;
+	font-weight: 600;
+}
+
+.RefreshButton{
+	background-color: #3D789D;
+}

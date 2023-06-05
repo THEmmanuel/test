@@ -1,5 +1,10 @@
 .ItemsSection {
 	width: 50%;
+}
+
+.Items {
+	width: 90%;
+	margin: auto;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -13,7 +18,9 @@
 }
 
 .ItemsInput {
-	/* background-color: aquamarine; */
+	display: flex;
+	flex-direction: column;
+	text-align: left;
 }
 
 .Input {
@@ -55,7 +62,7 @@
 }
 
 .InputSecondary {
-	width: 48%;
+	width: 100%;
 	border: none;
 	height: 30px;
 }
@@ -64,10 +71,11 @@
 	background-color: #F6F6F8;
 }
 
-.InputSecondaryWrappers {
+.InputSecondaryWrapper {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	width: 100%;
 }
 
 .ItemName {
@@ -83,4 +91,9 @@
 .ItemPrice {
 	background-color: #F0F0F2;
 	width: 60%;
+}
+
+.ItemsInputText {
+	opacity: 0.5;
+	font-size: 0.7em;
 }
