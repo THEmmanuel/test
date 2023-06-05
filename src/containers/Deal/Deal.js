@@ -1,13 +1,15 @@
 import React from 'react';
 import style from './Deal.module.css'
 
+import Spinner from '../../components/Spinner/Spinner';
+
 
 const Deal = () => {
 	return (
 		<div className={style.DealWrapper}>
 			<div className={style.Deal}>
-				<div className={style.SpinnerWrapper}>
-					Spinner
+				<div >
+					<Spinner/>
 				</div>
 
 				<div>
@@ -32,8 +34,8 @@ const Deal = () => {
 					</div>
 
 					<div>
-						<div>
-							<span>Price</span>
+						<div className={style.ChanceInputWrapper}>
+							<span className={style.ChanceInputHeading}>PRICE</span>
 							<input type="text" className={style.ChanceInput} />
 						</div>
 
