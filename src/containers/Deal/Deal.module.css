@@ -1,3 +1,11 @@
+.DealWrapper{
+	width: 50%;
+}
+
+.Deal{
+	width: 90%;
+}
+
 .SpinnerWrapper{
 	width: 200%;
 	height: 200px;
@@ -8,11 +16,16 @@
 	background-color: #3D9D43;
 	border: none;
 	padding: 10px 40px;
-	font-size: 1em;
+	font-size: 0.8em;
 	color: #FFF;
 	font-weight: 600;
 }
 
 .RefreshButton{
 	background-color: #3D789D;
+}
+
+.ChanceWrapper{
+	background-color: #F6F6F8;
+	width: 100%;
 }

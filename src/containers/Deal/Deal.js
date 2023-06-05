@@ -4,8 +4,8 @@ import style from './Deal.module.css'
 
 const Deal = () => {
 	return (
-		<div>
-			<div>
+		<div className={style.DealWrapper}>
+			<div className={style.Deal}>
 				<div className={style.SpinnerWrapper}>
 					Spinner
 				</div>
@@ -16,18 +16,25 @@ const Deal = () => {
 					<button>quick spin</button>
 				</div>
 
-				<div>
+				<div className={style.ChanceWrapper}>
 					<div>
 						<span>Chance</span>
 						<div>
 							stuff
+							<div>
+								<button>Min</button>
+								<button>10%</button>
+								<button>25%</button>
+								<button>50%</button>
+								<button>Max</button>
+							</div>
 						</div>
 					</div>
 
 					<div>
 						<span>Price</span>
 						<div>
-							stuff
+							slider
 						</div>
 					</div>
 				</div>
