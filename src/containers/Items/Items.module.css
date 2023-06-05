@@ -1,3 +1,61 @@
-.ItemsContainer{
-	
+.ItemsSection {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.ItemsInputWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.ItemsInput {
+	/* background-color: aquamarine; */
+}
+
+.Input {
+	width: 100%;
+	border: none;
+	height: 30px;
+}
+
+.ItemsContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ItemsInputContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+}
+
+.ItemInfo {
+	display: flex;
+	flex-direction: column;
+}
+
+.ItemWrapper {
+	width: 220px;
+	background-color: navajowhite;
+}
+
+.InputSecondary {
+	width: 48%;
+	border: none;
+	height: 30px;
+}
+
+.ItemsContainer {
+	background-color: #F6F6F8;
+}
+
+.InputSecondaryWrappers {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
