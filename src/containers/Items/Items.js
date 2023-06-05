@@ -21,11 +21,11 @@ const Items = () => {
 
 			<div className={style.ItemsContainer}>
 				<div className={style.ItemWrapper}>
-					<span>image</span>
+					<div className={style.ItemImage}>image</div>
 					<div className={style.ItemInfo}>
-						<span>Name</span>
-						<span>Brand</span>
-						<span>Price</span>
+						<span className={style.ItemName}>Name</span>
+						<span className={style.ItemBrand}>Brand</span>
+						<span className={style.ItemPrice}>Price</span>
 					</div>
 				</div>
 
