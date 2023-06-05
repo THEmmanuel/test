@@ -5,7 +5,8 @@ import needleImage from '../../assets/needle-dark.svg';
 const CircleProgressBar = ({ progress = 80 }) => {
 	const radius = 205;
 	const circumference = 2 * Math.PI * radius;
-	const [rotation, setRotation] = useState(0);
+	const [progressRotation, setProgressRotation] = useState(0);
+	const [needleRotation, setNeedleRotation] = useState(0);
 	const [isRotating, setIsRotating] = useState(false);
 	const [isInGreenArea, setIsInGreenArea] = useState(false);
 
@@ -27,7 +28,7 @@ const CircleProgressBar = ({ progress = 80 }) => {
 			const dy = clientY - centerY;
 			const angle = Math.atan2(dy, dx);
 			const degrees = angle * (180 / Math.PI);
-			setRotation(degrees);
+			setProgressRotation(degrees);
 
 			// Calculate if the needle is in the green area
 			const greenAreaStart = -60; // Starting angle of the green area
@@ -35,6 +36,7 @@ const CircleProgressBar = ({ progress = 80 }) => {
 			setIsInGreenArea(degrees >= greenAreaStart && degrees <= greenAreaEnd);
 		}
 	};
+
 
 	useEffect(() => {
 		document.addEventListener('mousemove', handleMouseMove);
@@ -49,6 +51,13 @@ const CircleProgressBar = ({ progress = 80 }) => {
 		transition: 'stroke-dashoffset 0.3s ease',
 	};
 
+	const spinNeedle = () => {
+		const randomRotation = Math.random() * 360 + 720; // Random rotation with multiple full spins (720 degrees)
+		setNeedleRotation(randomRotation);
+		setIsInGreenArea(false);
+	};
+
+
 	return (
 		<div className={styles.container}>
 			<svg
@@ -58,30 +67,32 @@ const CircleProgressBar = ({ progress = 80 }) => {
 				onMouseDown={handleMouseDown}
 				onMouseUp={handleMouseUp}
 			>
-				<g transform={`translate(230, 230) rotate(${rotation})`}>
+				<g transform={`translate(230, 230)`}>
 					<circle
 						className={styles.circleBackground}
 						cx="0"
 						cy="0"
 						r={radius}
 					/>
-					<circle
-						className={styles.circleProgressBar}
-						cx="0"
-						cy="0"
-						r={radius}
-						style={progressStyle}
-					/>
-					{isInGreenArea && (
+					<g style={{ transform: `rotate(${progressRotation}deg)` }}>
+						<circle
+							className={styles.circleProgressBar}
+							cx="0"
+							cy="0"
+							r={radius}
+							style={progressStyle}
+						/>
+					</g>
+					<g style={{ transform: `rotate(${needleRotation}deg)` }}>
 						<image
 							className={styles.needleImage}
 							href={needleImage}
 							x="-45"
-							y="-45"
+							y="-90" // Adjust the y-coordinate to anchor the needle at the bottom
 							width="90"
 							height="90"
 						/>
-					)}
+					</g>
 					<foreignObject
 						x={-radius}
 						y={radius / 2}
@@ -102,6 +113,7 @@ const CircleProgressBar = ({ progress = 80 }) => {
 					</foreignObject>
 				</g>
 			</svg>
+			<button onClick={spinNeedle}>Spin</button>
 		</div>
 	);
 };

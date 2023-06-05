@@ -1,5 +1,6 @@
 import React from 'react';
-import style from './Items.module.css'
+import style from './Items.module.css';
+import data from '../../data';
 
 const Items = () => {
 
@@ -29,22 +30,20 @@ const Items = () => {
 				</div>
 
 				<div className={style.ItemsContainer}>
-					<div className={style.ItemWrapper}>
-						<div className={style.ItemImage}>image</div>
-						<div className={style.ItemInfo}>
-							<span className={style.ItemName}>Name</span>
-							<span className={style.ItemBrand}>Brand</span>
-							<span className={style.ItemPrice}>Price</span>
-						</div>
-					</div>
-
-					<div>
-						item
-					</div>
-
-					<div>
-						item
-					</div>
+					{
+						data.map(item =>
+							<div className={style.ItemWrapper}>
+								<div className={style.ItemImageWrapper}>
+									<img src={item.imageLink} alt="" className={style.ItemImage}/>
+								</div>
+								<div className={style.ItemInfo}>
+									<span className={style.ItemName}>{item.itemName}</span>
+									<span className={style.ItemBrand}>{item.itemBrand}</span>
+									<span className={style.ItemPrice}>${item.itemPrice}</span>
+								</div>
+							</div>
+						)
+					}
 				</div>
 			</div>
 		</div>

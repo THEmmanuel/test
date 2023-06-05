@@ -39,6 +39,10 @@
 .ItemsContainer {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+	margin: auto;
+	width: 100%;
+	padding: 20px 0;
 }
 
 .ItemsInputContainer {
@@ -56,17 +60,21 @@
 	gap: 5px;
 }
 
-.ItemImage {
+.ItemImageWrapper {
 	background-color: #F9E6C2;
 	height: 60%;
 	width: 90%;
 	margin: 10px auto;
+	display: flex;
+	justify-content: center;
+
 }
 
 .ItemWrapper {
 	width: 220px;
 	height: 280px;
 	background-color: #FFFFFF;
+	margin: auto;
 }
 
 .InputSecondary {
@@ -109,4 +117,9 @@
 .ItemsInputText {
 	opacity: 0.5;
 	font-size: 0.7em;
+}
+
+.ItemImage {
+	height: 50%;
+	margin: auto;
 }
