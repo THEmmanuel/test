@@ -12,6 +12,25 @@
 	background-color: black;
 }
 
+.Buttons{
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+	justify-content: center;
+	gap: 20px;
+}
+
+.ChanceInputContainer{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.ChanceInputChance{
+	width: 100%;
+}
+
 .DealButton {
 	background-color: #3D9D43;
 	border: none;
@@ -23,11 +42,15 @@
 
 .RefreshButton {
 	background-color: #3D789D;
+	border: none;
 }
 
 .ChanceWrapper {
 	background-color: #F6F6F8;
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .ChanceButton {
@@ -41,6 +64,7 @@
 	display: flex;
 	flex-direction: row;
 	gap: 10px;
+	background-color: #FFF;
 }
 
 .ChanceInputWrapper {
@@ -63,22 +87,28 @@
 	border: none;
 }
 
-/* .Slider {
-	background: linear-gradient(to right, #82CFD0 0%, #82CFD0 40%, #fff 40%, #fff 100%);
-	border: solid 2px #82CFD0;
+.Slider {
+	background: #3D9D43;
 	border-radius: 8px;
 	height: 7px;
-	width: 400px;
+	width: 100%;
 	outline: none;
 	transition: background 450ms ease-in;
 	-webkit-appearance: none;
-  }
-  
-  .Slider::-webkit-slider-thumb {
+}
+
+.SliderRanges{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.Slider::-webkit-slider-thumb {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
 	-webkit-appearance: none;
 	cursor: ew-resize;
-	background: #434343;
-  } */
+	background: #FFF;
+	border: #3D9D43 solid 5px;
+}

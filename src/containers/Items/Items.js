@@ -36,6 +36,7 @@ const Items = () => {
 								<div className={style.ItemImageWrapper}>
 									<img src={item.imageLink} alt="" className={style.ItemImage}/>
 								</div>
+								
 								<div className={style.ItemInfo}>
 									<span className={style.ItemName}>{item.itemName}</span>
 									<span className={style.ItemBrand}>{item.itemBrand}</span>

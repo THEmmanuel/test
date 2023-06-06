@@ -100,7 +100,7 @@ const CircleProgressBar = ({ progress = 80 }) => {
 						height={radius}
 					>
 						<div className={styles.progressTextContainer}>
-							<span className={styles.progressText}>{`${progress}%`}</span>
+							{/* <span className={styles.progressText}>{`${progress}%`}</span> */}
 						</div>
 						<div className={styles.middleContent}>
 							{isInGreenArea ? (
@@ -113,7 +113,7 @@ const CircleProgressBar = ({ progress = 80 }) => {
 					</foreignObject>
 				</g>
 			</svg>
-			<button onClick={spinNeedle}>Spin</button>
+			{/* <button onClick={spinNeedle}>Spin</button> */}
 		</div>
 	);
 };
